@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Search from './search';
 import Selection from './selection';
 
@@ -9,6 +9,6 @@ const Filter = () => {
       <Search/>
     </div>
   )
-}
+};
 
 export default Filter;
