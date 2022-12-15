@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'waving-hand': 'wave 2s linear infinite',
+      }
+    },
   },
   plugins: [],
   darkMode:'class',
