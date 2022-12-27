@@ -15,7 +15,6 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Modal = (props: ModalTypes) => {
     const { data, error } = useSWR(props.url, fetcher);
-    console.log(data)
 
     const capitalize = (name: string): string => {
         return name.charAt(0).toUpperCase() + name.slice(1);
