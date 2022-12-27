@@ -9,7 +9,7 @@ const Home: NextPage = ({ pokemons }: InferGetStaticPropsType<typeof getStaticPr
   return (
     <Fragment>
       <Filter />
-      <div className="grid auto-rows-max grid-cols-4 gap-10">
+      <div className="grid auto-rows-max cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {React.Children.toArray(pokemons.map((pokemon: PokemonType): ReactElement => (
           <Pokemon name={pokemon.name} url={pokemon.url} />
         )))}
