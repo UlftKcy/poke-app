@@ -1,15 +1,5 @@
-import { useRouter } from 'next/router';
-import React, { Fragment } from 'react'
-import { createPortal } from 'react-dom';
 import useSWR from 'swr';
-
-interface ModalTypes {
-    children?: React.ReactNode;
-    isOpen: boolean;
-    toggle: () => void;
-    url: string;
-    name: string;
-}
+import { ModalTypes } from '../../types';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -20,8 +10,6 @@ const Modal = (props: ModalTypes) => {
         return name.charAt(0).toUpperCase() + name.slice(1);
     }
 
-    if (error) return <div>Failed to load</div>
-    if (!data) return <div>Loading...</div>
     if (!props.isOpen) return null;
 
     return (

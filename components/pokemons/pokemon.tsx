@@ -13,7 +13,7 @@ const Pokemon = ({ name, url }: PokemonType) => {
                 </div>
             </div>
             <h1 className='text-center capitalize text-lg font-mono font-extrabold text-blue-600 dark:text-white contrast-200'>{name}</h1>
-            <Modal isOpen={isOpen} toggle={toggle} url={url} name={name}/>
+            <Modal isOpen={isOpen} toggle={toggle} url={url} name={name} />
         </div>
     )
 }

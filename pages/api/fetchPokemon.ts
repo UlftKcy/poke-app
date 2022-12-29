@@ -5,7 +5,6 @@ export const getAllPokemon = async () => {
         const response = await fetch(`${API_URL}/pokemon?limit=52`)
         const response_data = await response.json();
         return response_data.results;
-
     } catch (error) {
         throw new Error('Something went wrong while get pokemons', { cause: error });
     }
